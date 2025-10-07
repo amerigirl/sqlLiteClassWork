@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface NoteDao {
 
-    val allNotes: Flow<List<Note>> = noteDao.getAllNotes()
+    val allNotes: Flow<List<Note>>
 
     suspend fun insert(note: Note) = noteDao.insert(note)
     suspend fun update(note: Note) = noteDao.update(note)
